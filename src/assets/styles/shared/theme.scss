@@ -1,0 +1,242 @@
+.matarazzo-theme{
+  textarea,
+  input,
+  select,
+  a,
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-info,
+  .btn-tertiary {
+    &:focus,
+    &:active{
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+    }
+  } 
+
+  .container{
+    padding: 0 15px;
+    min-height: 700px;
+  }
+
+  .form{
+    &-group{
+      &.theme{
+        border-bottom: 1px solid $color-gray;
+        border-radius: initial;
+        margin-bottom: 10px;
+
+        input, select{
+          padding: 10px;
+        }
+      }
+    }
+
+    &-check-input{
+      border: 1px solid $color-gray;
+
+      &:checked{
+        background-color: $color-gray-dark;
+      }
+    }
+
+    &-control{
+      border: none;
+      border-radius: 16px;
+      padding: 11px 20px;
+      font-size: 12px;
+      color: $color-gray;
+
+      &.text-area{
+        border: 1px solid $color-gray;
+        min-height: 120px;
+      }
+    }
+  }
+
+  .btn{
+    &-primary{
+      @extend .btn-default;
+      background-color: $color-primary;
+      font-size: 12px;
+
+      &:hover{
+        background-color: $color-primary-light;
+      }
+    }
+
+    &-secondary{
+      @extend .btn-default;
+      background: none;
+      color: $color-gray;
+      border: 1px solid $color-gray-medium;
+      font-size: 12px;
+
+      &:hover{
+        background-color: $color-gray-medium;
+      }
+    }
+
+    &-info{
+      font-size: 11px;
+      background-color: $color-gray-light;
+      border: 1px solid $color-gray-medium;
+      color: $color-gray-dark;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 5px 15px;
+
+      &:hover{
+        background-color: $color-gray-medium;
+      }
+    }
+
+    &-tertiary{
+      @extend .btn-default;
+      background-color: $color-gray-light;
+      border: 1px solid $color-gray-medium;
+      font-size: 12px;
+
+      &.right{
+        position: absolute;
+        left: 32px;
+      }
+
+      &:hover{
+        background-color: $color-gray-medium;
+      }
+    }
+  }
+  
+  .list-group-item{
+    background: none;
+    padding: 20px;
+    padding: 26px 20px 20px 20px;
+
+    p, h2{
+      margin: 0;
+    }
+  }
+
+  .modal{
+    &-content{
+      padding: 20px;
+      border-radius: 15px;
+      border: none;
+
+      &.large-height{
+        min-height: 600px;
+      }
+    }
+
+    &-header{
+      display: block;
+    }
+
+    &-dialog{
+      .list-group{
+        .list-group-item{
+          padding: 10px 20px;
+          color: $color-gray;
+        }
+      }
+    }
+  }
+
+  .modal-footer,
+  .modal-header{
+    border: none;
+  }
+  
+  .breadcrumb{
+    @extend .container-default;
+    width: 100%;
+    height: 20px;
+
+    &-item{
+      a{
+        color: $color-gray;
+      }
+
+      &.active{
+        font-weight: 700;
+      }
+    } 
+  }
+
+  .page-link{
+    color: $color-black;
+    background: none;
+
+    &:hover{
+      background-color: $color-gray-light;
+    }
+  }
+
+  .pagination{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .nav{
+    &-pills{
+      .nav-link{
+        padding: 15px 15px 15px 40px;
+        
+        &.active{
+          background-color: $color-gray-lightness;
+          border-radius: 18px 0 0 18px;
+          padding: 15px 15px 15px 40px;
+          color: $color-gray;
+        }
+      }
+    }
+
+    &-tabs{
+      margin-bottom: 30px;
+
+      .nav-link{
+        color: $color-gray-dark;
+
+        &.active{
+          font-weight: 600;
+          background-color: $color-gray-light;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .text-right{
+    text-align: right;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .nav{
+      &-pills{
+        .nav-link{
+          padding: 15px 15px 15px 20px;
+          
+          &.active{
+            padding: 15px 15px 15px 20px;
+          }
+        }
+      }
+    }
+
+    .modal-dialog{
+      max-width: 700px;
+    }
+
+    .container{
+      max-width: 900px;
+    }
+  }
+}
+
+

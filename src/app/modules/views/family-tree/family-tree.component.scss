@@ -1,0 +1,160 @@
+@media print {
+  .family-tree-title {
+      background-color: #600e02 !important;
+      -webkit-print-color-adjust: exact; 
+  }
+
+  .maternal, .paternal, .applicant{ 
+    & .family-tree-container{
+      & .join{
+        border-left: 1px solid #868585;
+        -webkit-print-color-adjust: exact; 
+  
+        &:after{
+          background-color: #868585 !important;
+          -webkit-print-color-adjust: exact; 
+        }
+  
+        &:before{
+          background-color: #868585 !important;
+          -webkit-print-color-adjust: exact; 
+        }
+      }
+    }
+  }
+}
+
+.family-tree-row{
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 20px 0px;
+
+  &:last-child{
+    .join{
+      display: none;
+    }
+  }
+}
+
+.family-tree-main{
+  width: 595px;
+  height: 842px;
+  background: #fff;
+  padding: 0 10px;
+}
+
+.img{
+  width: 25px;
+  height: 25px;
+}
+
+.family-tree{
+  position: relative;
+  float: left;
+}
+
+.family-tree-container-half{
+  position: relative;
+  float: left;
+  width: 50%;
+}
+
+.family-tree-title{
+  background: #600e02;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.family-tree-title-container{
+  position: relative;
+  float: left;
+  width: 70%;
+}
+
+.family-tree-title h1{
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+  margin: 0;
+}
+
+.family-tree-logo{
+  width: 95px;
+}
+
+.family-tree-logo-container{
+  position: relative;
+  float: left;
+  width: 30%;
+}
+
+.family-tree-img{
+  padding: 4px 10px;
+}
+
+.family-tree-name{
+  color: #600e02;
+  font-size: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+.family-tree-item{
+  font-size: 8px;
+}
+
+.family-tree-container{
+  position: relative;
+  float: left;
+  background-color: #fff;
+  min-height: 45px;
+  padding: 5px 8px 5px 0;
+  box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+}
+
+.family-tree-container:nth-child(2){
+  margin-left: 20px;
+}
+
+.maternal, .paternal, .applicant{ 
+  & .family-tree-container{
+    & .join{
+      bottom: -31px;
+      right: 50%;
+      position: absolute;
+      height: 35px;
+      border-left: 2px solid #868585;
+
+      &:after{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        background: #868585;
+        position: absolute;
+        top: 0;
+        left: -4px;
+      }
+
+      &:before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        background: #868585;
+        position: absolute;
+        bottom: 0;
+        left: -4px;
+      }
+    }
+  }
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
